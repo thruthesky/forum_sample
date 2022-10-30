@@ -257,6 +257,27 @@ class _PostListWidgetState extends State<PostListWidget> {
                                   ),
                                 ),
                               ),
+                              Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context).alternate,
+                                  shape: BoxShape.circle,
+                                ),
+                                alignment: AlignmentDirectional(0, 0),
+                                child: SelectionArea(
+                                    child: Text(
+                                  listViewPostsQueryPostsRecord.noOfComments!
+                                      .toString(),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                      ),
+                                )),
+                              ),
                               Icon(
                                 Icons.chevron_right,
                                 color: Colors.black,

@@ -7,6 +7,7 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(CommentsRecord.serializer)
       ..add(PostsRecord.serializer)
       ..add(UsersRecord.serializer)
       ..addBuilderFactory(
@@ -15,6 +16,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
                 DocumentReference, const [const FullType.nullable(Object)])
           ]),
           () => new ListBuilder<DocumentReference<Object?>>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>()))
